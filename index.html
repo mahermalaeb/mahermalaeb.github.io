@@ -88,6 +88,8 @@ Powered by Hydejack v8.5.1 <https://hydejack.com/>
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
 
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
 
 
 <link rel="dns-prefetch" href="/" id="_baseURL">
@@ -221,7 +223,7 @@ Powered by Hydejack v8.5.1 <https://hydejack.com/>
       <li>
         <a
           id="_navigation"
-          href="/hydejack/"
+          href="/blog/"
           class="sidebar-nav-item"
           
         >
@@ -403,7 +405,7 @@ Powered by Hydejack v8.5.1 <https://hydejack.com/>
 
 
 
-in <a href="/hydejack/" class="flip-title">Blog</a>
+in <a href="/blog/" class="flip-title">Blog</a>
 
       
 
@@ -464,157 +466,7 @@ in <a href="/hydejack/" class="flip-title">Blog</a>
   </header>
 
   
-    <p>Coders, who they are, and what they do changed a lot through out their short history which effectively started in the late 50’s. This history is explained by Clive Thompson in his book “Coders”. He split the changes into “four waves of coders” as he calls it. Those waves shaped the coders to who they are today.</p>
-
-<h2 id="text-blocks">Text Blocks</h2>
-<p><em>This feature is still a preview feature in JDK 13 so it is not recommended to use it in production. It might have breaking changes in the future.</em></p>
-
-<p>Before java 13, multi-line string in source code was not straightforward to write or read.</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Before Java 13</span>
-<span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="s">"&lt;html&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"    &lt;body&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"        &lt;p&gt;Hello, world&lt;/p&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"    &lt;/body&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"&lt;/html&gt;\n"</span><span class="o">;</span>
-</code></pre></div></div>
-<p>Java 13 introduced the triple quote notation <code class="highlighter-rouge">"""</code> . This will allow us to defined strings on multiple line without the need to escape new lines <code class="highlighter-rouge">\n</code> or use the <code class="highlighter-rouge">+</code> sign for string concatenation on multiple lines. So the same HTML above becomes much more simpler to read</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Starting Java 13</span>
-<span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="s">"""
-              &lt;html&gt;
-                  &lt;body&gt;
-                      &lt;p&gt;Hello, world&lt;/p&gt;
-                  &lt;/body&gt;
-              &lt;/html&gt;
-              """</span><span class="o">;</span>
-</code></pre></div></div>
-<p>This change allows us to interchangeably copy-paste code between files and java source code.</p>
-
-<p>The new text block is treated like any other string at runtime. To be able to transform a text block to a standard String, the compiler has to perform a translation procedure as follows:</p>
-<ol>
-  <li><strong>Unify line endings:</strong> The output of the string should be the same regardless if the code is running on Linux or Windows environment</li>
-  <li><strong>Trim white spaces:</strong> The indentation in all the lines is removed using the method explained in the JEP-355 “ by counting the number of leading white space characters on each line and taking the minimum count”. Those white spaces are called “incidental white space”</li>
-  <li><strong>Translate escape sequences:</strong> special characters that are usually escaped in Strings such as double quotes do not need to be escaped when used in Text Blocks. The translation happens automatically</li>
-</ol>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// No need to escape double quotes in the JSON below</span>
-<span class="nc">String</span> <span class="n">textBlock</span> <span class="o">=</span> <span class="s">"""
-       {
-         "</span><span class="n">name</span><span class="s">":"</span><span class="nc">John</span><span class="s">",
-         "</span><span class="n">age</span><span class="s">":30,
-         "</span><span class="n">cars</span><span class="s">": {
-           "</span><span class="n">car1</span><span class="s">":"</span><span class="nc">Ford</span><span class="s">",
-           "</span><span class="n">car2</span><span class="s">":"</span><span class="no">BMW</span><span class="s">",
-           "</span><span class="n">car3</span><span class="s">":"</span><span class="nc">Fiat</span><span class="s">"
-         }
-       } 
-       """</span><span class="o">;</span>
-</code></pre></div></div>
-
-<h3 id="string-api-changes-related-to-textblocks">String API changes related to Text Blocks</h3>
-<p>Some new methods were added to the String API that work hand in hand with the Text Block feature.</p>
-
-<p><a href="https://download.java.net/java/early_access/jdk13/docs/api/java.base/java/lang/String.html#stripIndent()"><strong>stripIndent()</strong></a></p>
-
-<p>This method does what the step 2 of the Text Block Transformation algorithm do. It removes unnecessary indentation from strings (incidental white space) keeping the relative indentation only. For example, consider the below String.</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="s">"\t&lt;html&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"\t\t&lt;body&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"\t\t\t&lt;p&gt;Hello, world&lt;/p&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"\t\t&lt;/body&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"\t&lt;/html&gt;"</span><span class="o">;</span>
-</code></pre></div></div>
-<p>If we call the <code class="highlighter-rouge">stripIndent()</code> on the string above, the first tab <code class="highlighter-rouge">\t</code> will be removed from the beginning of the <code class="highlighter-rouge">html</code> string and the resulting string will be:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="s">"&lt;html&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"\t&lt;body&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"\t\t&lt;p&gt;Hello, world&lt;/p&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"\t&lt;/body&gt;\n"</span> <span class="o">+</span>
-              <span class="s">"&lt;/html&gt;"</span><span class="o">;</span>
-</code></pre></div></div>
-<p><a href="https://download.java.net/java/early_access/jdk13/docs/api/java.base/java/lang/String.html#translateEscapes()"><strong>translateEscapes()</strong></a></p>
-
-<p>Transforms a string that includes some escape characters to string literals. This is useful if, for example, you are reading a text file with string content containing escape characters.
-consider a text file with the following content.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\"Hello\n\World\"
-</code></pre></div></div>
-<p>If we read this file into a string and we print it we get the exact same content of that file. But if we use the new <code class="highlighter-rouge">translateEscapes()</code> the special characters will be escaped and the string will be</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Hello    World"
-</code></pre></div></div>
-<p><a href="https://download.java.net/java/early_access/jdk13/docs/api/java.base/java/lang/String.html#formatted(java.lang.Object...)"><strong>formatted(…)</strong></a></p>
-
-<p>A convenience method that does what String.format() do but in a non-static manner.
-The below are equivalent</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Hello %s"</span><span class="o">,</span> <span class="s">"world"</span><span class="o">)</span>
-<span class="s">"Hello %s"</span><span class="o">.</span><span class="na">formatted</span><span class="o">(</span><span class="s">"world"</span><span class="o">)</span>
-</code></pre></div></div>
-<p><em>Those methods are marked as deprecated because they might change in future releases if the Text Blocks feature changes. The deprecation will be removed once the Text Blocks feature is no longer in Preview Mode.</em></p>
-
-<h2 id="switch-expressions-updated">Switch Expressions Updated</h2>
-<p><em>This feature is still a <a href="https://openjdk.java.net/jeps/12">preview feature</a> in JDK 13 so it is not recommended to use it in production. It might have breaking changes in the future.</em></p>
-
-<p>Switch Expressions were introduced in Java 12 as a preview feature and are still a preview feature in Java 13. A switch expression is a compact version of the traditional switch statements and can be assigned to a variable directly.</p>
-
-<p>The result of a switch statement is directly returned as shown below</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">dayOfWeek</span> <span class="o">=</span> <span class="k">switch</span><span class="o">(</span><span class="mi">1</span><span class="o">){</span>
-   <span class="k">case</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="s">"Monday"</span><span class="o">;</span>
-   <span class="k">case</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="s">"Tuesday"</span><span class="o">;</span>
-      <span class="o">...</span>
-   <span class="k">default</span> <span class="o">-&gt;</span> <span class="s">"Unknown"</span><span class="o">;</span>
-  <span class="o">};</span>
-</code></pre></div></div>
-<p>but when using multi-line statements for a certain case, a new keyword <code class="highlighter-rouge">yield</code> was introduced with Java 13 to indicate the return value of the switch expression</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">dayOfWeek</span> <span class="o">=</span> <span class="k">switch</span><span class="o">(</span><span class="mi">1</span><span class="o">){</span>
-   <span class="k">case</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="o">{</span>
-    <span class="nc">String</span> <span class="n">day</span> <span class="o">=</span> <span class="s">"Monday"</span><span class="o">;</span>
-    <span class="n">yield</span> <span class="n">day</span><span class="o">;</span>
-   <span class="o">}</span>
-   <span class="k">case</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="o">{</span>
-    <span class="nc">String</span> <span class="n">day</span> <span class="o">=</span> <span class="s">"Tuesday"</span><span class="o">;</span>
-    <span class="n">yield</span> <span class="n">day</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="o">...</span>
-   <span class="k">default</span> <span class="o">-&gt;</span> <span class="s">"Unknown"</span><span class="o">;</span>
-  <span class="o">};</span>
-</code></pre></div></div>
-<p>In java 12, the keyword <code class="highlighter-rouge">yield</code> did not exist and <code class="highlighter-rouge">break</code> was used instead but it was dropped because it proved to be misleading</p>
-<ul>
-  <li>Copy a bulk of bytes from a byte array into a specific index of the ByteBuffer.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">ByteBuffer</span> <span class="n">put</span><span class="err">​</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">src</span><span class="o">)</span>
-<span class="nc">ByteBuffer</span> <span class="n">put</span><span class="err">​</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">src</span><span class="o">,</span> <span class="kt">int</span> <span class="n">offset</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">)</span>
-</code></pre></div>    </div>
-  </li>
-  <li>Copy a bulk of bytes from a specific index of the ByteBuffer into byte array</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">ByteBuffer</span> <span class="n">get</span><span class="err">​</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">dst</span><span class="o">)</span>
-<span class="nc">ByteBuffer</span> <span class="n">get</span><span class="err">​</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">dst</span><span class="o">,</span> <span class="kt">int</span> <span class="n">offset</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">)</span>
-</code></pre></div></div>
-
-<h2 id="security-apichanges">Security API changes</h2>
-<p>The package <code class="highlighter-rouge">javax.security.cert</code> was removed and the classes inside this package were moved to the package <code class="highlighter-rouge">java.security.cert</code>.
-This is a breaking change but it is easy to fix the code base by only removing the <code class="highlighter-rouge">x</code> from the package name</p>
-
-<h2 id="platform-changes">Platform changes</h2>
-
-<ul>
-  <li>Re-implementation of the Socket API: The new API is more maintainable, performant and better handles concurrency. If you want to stick to the old implementation you can pass the flag -Djdk.net.usePlainSocketImpl (not recommended) to the jvm arguments</li>
-  <li>Removal of the -Xverify:none and -noverify : Those flags allowed to skip byte code checks when starting the JVM to improve its performance. But they introduced security issues. To enhance the startup performance of the JVM it is recommended to use the Class Data Sharing feature of Java which was also enhanced in Java 13</li>
-</ul>
-
-<p>We’ve been through major changes that happened with Java 13, but the list is by no means extensive or the explanation of each feature complete. The purpose of the article is to get you up-to-date with the new release of Java without getting lost into the details.</p>
-
-<h3 id="resources">Resources</h3>
-
-<p><a href="https://app.pluralsight.com/library/courses/whats-new-in-java-13/table-of-contents">What’s New in Java 13 by Sander Mak</a></p>
-
-<p><a href="http://openjdk.java.net/jeps/355">JEP 355: Text Blocks (Preview)</a></p>
-
-<p><a href="http://openjdk.java.net/jeps/354">JEP 354: Switch Expressions (Preview)</a></p>
-
-<p><a href="https://download.java.net/java/early_access/jdk13/docs/api/">Java® Platform, Standard Edition &amp; Java Development Kit Version 13 API Specification</a></p>
+    The Java language today is younger than ever, delivering new and exciting features every 6 months.In less than 10 minutes, you can learn about Text Blocks, the new Switch Expression and the different API and platform changes that JDK 13 introduces! 
 
 
     
@@ -659,7 +511,7 @@ This is a breaking change but it is easy to fix the code base by only removing t
 
 
 
-in <a href="/hydejack/" class="flip-title">Blog</a>
+in <a href="/blog/" class="flip-title">Blog</a>
 
       
 
@@ -720,25 +572,7 @@ in <a href="/hydejack/" class="flip-title">Blog</a>
   </header>
 
   
-    <p>Coders, who they are, and what they do changed a lot through out their short history which effectively started in the late 50’s. This history is explained by Clive Thompson in his book “Coders”. He split the changes into “four waves of coders” as he calls it. Those waves shaped the coders to who they are today.</p>
-
-<h2 id="wave-one-taming-thebeasts">Wave One: Taming The Beasts</h2>
-<p>The first generation of coders emerged in the late 50’s and early 60’s. Back then computers were huge power hungry machines. You could only find one in university computer labs. Computers didn’t have a mouse or keyboard to interact with. Coders wrote programs on paper using low level language which are very hard to understand. The paper programs were then put in a queue to be handled by special personnel that punched them into cards. Computers only understood punch cards. You had to wait many hours to get the result of you program. If you made a mistake, a bug escaped, you need to go through the whole process again. Coding required so much patience.</p>
-
-<p>The invention of the transistor drastically changed the rules of the game and opened the door to create smaller computers that could be used by scientist who didn’t know coding. So the challenge of the time was to build an operating system that allowed those scientists to use the computers. Although coding had its challenge, in that era it was still regarded with a lower status when compared to hardware engineers. Coding jobs were mostly held by women.</p>
-
-<h2 id="wave-two-nightowls">Wave Two: Night Owls</h2>
-<p>In the 60’s and early 70’s computers in universities such as MIT were used during the day by researchers for their studies. But during nights, the machines sat idle. So they attracted a new type of coders. Those coders came curious to learn what those machines can do and got hooked. They started tinkering with them. This opened the door for the creative usage of computers. They began using those computers to develop visual interfaces for simple games and to make music among other usages. It was the phase that introduced art into coding. It was also those coders who initiated the hacker culture. The culture of sharing code among other coders for free. The culture that accepted code regardless of whom it is coming from, be it kids, college dropouts or whoever. Code was code and that what mattered. Unfortunately, those coders were mostly boys and hacking computers overnights in computer labs creating an unwelcoming atmosphere for interested women. So this generation of coders were the first to start pushing women away from the coding field.</p>
-
-<h2 id="wave-three-gettingpersonal">Wave Three: Getting Personal</h2>
-<p>Personal Computers started to become a reality in the late 70’s but mainly in the 80’s. A middle-class family could afford to get their teenage child a computer of that time. Those personal computers became popular among teenagers because it allowed them to write their own video games and remake some of their famous arcade games. This was particularly appealing to boys which pushed girls even more away from this field. The dominance of personal computers was combined with the popularizing of the BASIC programming language. The English-like language was relatively easy to understand and came with sample programs and games that allowed those teenage boys to code their own versions of games and their own programs in their parents basements. Coding at that time was not thought of as a career or profession. Learning was done out of curiosity and for fun. The fact that everyone now have the possibility to code created a need for sharing that code to be customized and modified by other coders and re-shared again over the basic networks of the time. This was the first generation open source model.
-But in the early 90’s the availability of the more advanced networks which are closer to the internet as we know it today, changed the rules of the game on how coding was done. Before the internet, programs were shipped mostly physically using floppy disks. An escaped bug was so costly to correct and took a lot of time for the fix to reach the user. Programs were carefully designed, developed and then tested in a long traditional process which was called the waterfall approach. However the internet allowed changes to the code of a program to be instantly reflected to the users. Coders now can publish a basic version of their product to the users. The users will effectively be testers of this product that will report the bugs they will see which will be resolved in a much shorter time and released over the internet. This paradigm is what is known as the agile way of building software.</p>
-
-<h2 id="wave-four-take-over-theworld">Wave Four: Take Over The World</h2>
-<p>The web era we are living in today started to take over in the mid 90’s. With it, coding started to get more mainstream. The Netscape browser of the 90’s introduced the “view source” feature which allowed users to view the HTML code of any webpage and edit it to their likes. So code was available for everyone. The web also allowed the emerging of products such as social networks which billions of people used. Scaling introduced 2 extremely different types of problems. A technical problem of how to scale a product to be used by the whole world, in all time zones with relatively zero down time. Coders became increasingly interested not only on how to develop a program, but how to allow billions of users to use it at the same time. Those are two separate technical concerns.
-The second problem is a social one. A problem which is extremely outside the area of expertise of coders. The usage of such programs at scale and psychological tricks the coders implemented in their products to get users hooked proved to impact the psychology of users sometimes in destructive ways. Abusive behavior, hate speech and some other forms of social and psychological problems emerged. Coders didn’t always have the knowledge and the incentives to deal with such consequences. What mattered was scaling up which meant more success, more control and eventually more money. When software products became at that scale, and software engineering as a career was well formulated, it started attracting a genre of new graduates that were interested in the field for the sake of power and money. Those same people who used to go to Wall Street before, found in the coding industry a new opportunity to reach their goals, especially after the 2008 financial crisis and the damaged it brought to Wall Street.</p>
-
-<p>If you liked this article, then you will definitely like the book “Coders: The Making of a New Tribe and the Remaking of the World” by Clive Thompson.</p>
+    Coders, who they are, and what they do changed a lot throughout their short history which effectively started in the late 50's. This history is explained by Clive Thompson in his book "Coders". He split the changes into "four waves of coders" as he calls it. Those waves shaped the coders to who they are today.
 
 
     
@@ -794,6 +628,33 @@ The second problem is a social one. A problem which is extremely outside the are
   
 
   
+  <script>!function(w, d) {
+    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    /**/
+      ga('create', 'UA-146141047-1', 'auto');
+    /**/
+
+    var pushStateEl = d.getElementsByTagName('hy-push-state')[0];
+    var timeoutId;
+    pushStateEl.addEventListener('hy-push-state-load', function() {
+      w.clearTimeout(timeoutId);
+      timeoutId = w.setTimeout(function() {
+        ga('set', 'page', w.location.pathname);
+        ga('send', 'pageview');
+      }, 500);
+    });
+
+    d.addEventListener('hy--cookies-ok', function () {
+      w.ga(function(tracker) {
+        w.ga("set", "anonymizeIp", undefined);
+        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+      });
+    });
+
+    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+  }(window, document);</script>
+
 
 
 <!--<![endif]-->

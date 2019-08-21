@@ -91,6 +91,8 @@ Powered by Hydejack v8.5.1 <https://hydejack.com/>
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
 
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
 
 
 <link rel="dns-prefetch" href="/" id="_baseURL">
@@ -228,7 +230,7 @@ Powered by Hydejack v8.5.1 <https://hydejack.com/>
 
 
 
-in <a href="/hydejack/" class="flip-title">Blog</a>
+in <a href="/blog/" class="flip-title">Blog</a>
 
       
 
@@ -289,7 +291,7 @@ in <a href="/hydejack/" class="flip-title">Blog</a>
   </header>
 
   
-    <p>Coders, who they are, and what they do changed a lot through out their short history which effectively started in the late 50’s. This history is explained by Clive Thompson in his book “Coders”. He split the changes into “four waves of coders” as he calls it. Those waves shaped the coders to who they are today.</p>
+    <p>The Java language today is younger than ever, delivering new and exciting features every 6 months.In less than 10 minutes, you can learn about Text Blocks, the new Switch Expression and the different API and platform changes that JDK 13 introduces!</p>
 
 <h2 id="text-blocks">Text Blocks</h2>
 <p><em>This feature is still a preview feature in JDK 13 so it is not recommended to use it in production. It might have breaking changes in the future.</em></p>
@@ -532,8 +534,8 @@ This is a breaking change but it is easy to fix the code base by only removing t
       <li>
         <a
           id="_navigation"
-          href="/hydejack/"
-          class="sidebar-nav-item"
+          href="/blog/"
+          class="sidebar-nav-item active"
           
         >
           Blog
@@ -679,6 +681,33 @@ This is a breaking change but it is easy to fix the code base by only removing t
   
 
   
+  <script>!function(w, d) {
+    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    /**/
+      ga('create', 'UA-146141047-1', 'auto');
+    /**/
+
+    var pushStateEl = d.getElementsByTagName('hy-push-state')[0];
+    var timeoutId;
+    pushStateEl.addEventListener('hy-push-state-load', function() {
+      w.clearTimeout(timeoutId);
+      timeoutId = w.setTimeout(function() {
+        ga('set', 'page', w.location.pathname);
+        ga('send', 'pageview');
+      }, 500);
+    });
+
+    d.addEventListener('hy--cookies-ok', function () {
+      w.ga(function(tracker) {
+        w.ga("set", "anonymizeIp", undefined);
+        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+      });
+    });
+
+    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+  }(window, document);</script>
+
 
 
 <!--<![endif]-->

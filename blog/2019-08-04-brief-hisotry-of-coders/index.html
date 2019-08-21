@@ -91,6 +91,8 @@ Powered by Hydejack v8.5.1 <https://hydejack.com/>
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
 
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
 
 
 <link rel="dns-prefetch" href="/" id="_baseURL">
@@ -228,7 +230,7 @@ Powered by Hydejack v8.5.1 <https://hydejack.com/>
 
 
 
-in <a href="/hydejack/" class="flip-title">Blog</a>
+in <a href="/blog/" class="flip-title">Blog</a>
 
       
 
@@ -289,7 +291,7 @@ in <a href="/hydejack/" class="flip-title">Blog</a>
   </header>
 
   
-    <p>Coders, who they are, and what they do changed a lot through out their short history which effectively started in the late 50’s. This history is explained by Clive Thompson in his book “Coders”. He split the changes into “four waves of coders” as he calls it. Those waves shaped the coders to who they are today.</p>
+    <p>Coders, who they are, and what they do changed a lot throughout their short history which effectively started in the late 50’s. This history is explained by Clive Thompson in his book “Coders”. He split the changes into “four waves of coders” as he calls it. Those waves shaped the coders to who they are today.</p>
 
 <h2 id="wave-one-taming-thebeasts">Wave One: Taming The Beasts</h2>
 <p>The first generation of coders emerged in the late 50’s and early 60’s. Back then computers were huge power hungry machines. You could only find one in university computer labs. Computers didn’t have a mouse or keyboard to interact with. Coders wrote programs on paper using low level language which are very hard to understand. The paper programs were then put in a queue to be handled by special personnel that punched them into cards. Computers only understood punch cards. You had to wait many hours to get the result of you program. If you made a mistake, a bug escaped, you need to go through the whole process again. Coding required so much patience.</p>
@@ -400,8 +402,8 @@ The second problem is a social one. A problem which is extremely outside the are
       <li>
         <a
           id="_navigation"
-          href="/hydejack/"
-          class="sidebar-nav-item"
+          href="/blog/"
+          class="sidebar-nav-item active"
           
         >
           Blog
@@ -547,6 +549,33 @@ The second problem is a social one. A problem which is extremely outside the are
   
 
   
+  <script>!function(w, d) {
+    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    /**/
+      ga('create', 'UA-146141047-1', 'auto');
+    /**/
+
+    var pushStateEl = d.getElementsByTagName('hy-push-state')[0];
+    var timeoutId;
+    pushStateEl.addEventListener('hy-push-state-load', function() {
+      w.clearTimeout(timeoutId);
+      timeoutId = w.setTimeout(function() {
+        ga('set', 'page', w.location.pathname);
+        ga('send', 'pageview');
+      }, 500);
+    });
+
+    d.addEventListener('hy--cookies-ok', function () {
+      w.ga(function(tracker) {
+        w.ga("set", "anonymizeIp", undefined);
+        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+      });
+    });
+
+    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+  }(window, document);</script>
+
 
 
 <!--<![endif]-->
