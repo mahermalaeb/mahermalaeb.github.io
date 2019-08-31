@@ -1,5 +1,132 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-08-21T22:19:33+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Maher Malaeb</title><subtitle>&quot;Best Jekyll Theme by a Mile&quot;. **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
-</subtitle><author><name>Maher Malaeb</name><email>m.n.malaeb@gmail.com</email></author><entry><title type="html">Java 13 - Simply Explained</title><link href="http://localhost:4000/blog/2019-08-13-java-13-simply-explained/" rel="alternate" type="text/html" title="Java 13 - Simply Explained" /><published>2019-08-13T00:00:00+03:00</published><updated>2019-08-13T00:00:00+03:00</updated><id>http://localhost:4000/blog/java-13-simply-explained</id><content type="html" xml:base="http://localhost:4000/blog/2019-08-13-java-13-simply-explained/">&lt;p&gt;The Java language today is younger than ever, delivering new and exciting features every 6 months.In less than 10 minutes, you can learn about Text Blocks, the new Switch Expression and the different API and platform changes that JDK 13 introduces!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-08-31T14:15:49+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Maher Malaeb</title><subtitle>&quot;Best Jekyll Theme by a Mile&quot;. **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
+</subtitle><author><name>Maher Malaeb</name><email>m.n.malaeb@gmail.com</email></author><entry><title type="html">Write Better Java Unit Tests Using These Less Known Libraries</title><link href="http://localhost:4000/blog/2019-08-31-java-better-unit-tests-libraries/" rel="alternate" type="text/html" title="Write Better Java Unit Tests Using These Less Known Libraries" /><published>2019-08-31T00:00:00+03:00</published><updated>2019-08-31T00:00:00+03:00</updated><id>http://localhost:4000/blog/java-better-unit-tests-libraries</id><content type="html" xml:base="http://localhost:4000/blog/2019-08-31-java-better-unit-tests-libraries/">&lt;p&gt;If you try to Google for the best Java unit testing frameworks and libraries, you will get a bunch of famous names such as JUnit, Mockito, TestNG, Cucumber, Spring Test, etc. However, there are 3 libraries that equally valuable and yet they receive less attention.&lt;/p&gt;
+
+&lt;h2 id=&quot;hamcrest&quot;&gt;Hamcrest&lt;/h2&gt;
+
+&lt;p&gt;To put it simple, &lt;a href=&quot;http://hamcrest.org/JavaHamcrest/&quot;&gt;Hamcrest&lt;/a&gt; allows you to write assertions that read like the English language. It makes the test code declarative. It makes assertions like the below possible&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;equalTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;expected string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;equalTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;un-expected string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;personsList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hasItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;personX&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The way Hamcrest achieves this is by always using the &lt;code class=&quot;highlighter-rouge&quot;&gt;assertThat&lt;/code&gt; with a set of matchers that the library provides. A matcher is a predicate. It returns a &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or a &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; based on the input parameters. Some of the most useful matchers are:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//general&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;equalTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nullValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anyOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;allOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;//collections&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hasItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hasSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//String&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;startsWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startsWithIgnoringCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;containsString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Numbers&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;greaterThanOrEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lessThan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;You can also write your own matchers to perform custom assertions.&lt;/p&gt;
+
+&lt;p&gt;Hamcrest integrates with all versions of JUnit and with TestNG so you can start using the library right away after adding the test dependency in your product&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- maven --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.hamcrest&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;java-hamcrest&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.0.0.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// gradle&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;testCompile&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;group:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'org.hamcrest'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;name:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'java-hamcrest'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;version:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.0.0.0'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Get started with Hamcrest &lt;a href=&quot;https://www.baeldung.com/java-junit-hamcrest-guide&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;awaitility&quot;&gt;Awaitility&lt;/h2&gt;
+
+&lt;p&gt;Writing high quality unit tests is hard. Writing high quality unit tests for asynchronous code is much harder. &lt;a href=&quot;https://github.com/awaitility/awaitility&quot;&gt;Awaitility&lt;/a&gt; promises to make it easier for us to write clean and readable tests for async code. In its simplest form, you can use Awaitility as follows&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;await&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;until&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someConditionIsMet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// someConditionIsMet returns a Callable&amp;lt;Boolean&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If the condition is not met after a certain time (default 10 seconds) this call will throw an exception and the test will fail. Otherwise, the test passes asserting the condition is met.&lt;/p&gt;
+
+&lt;p&gt;Suppose that we are adding a person to a list through an async call. We can assert that the person is added as below&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;addToPersonsList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// this method calls an asynchronous system&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;await&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;until&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;personsList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can change the timeout we wait for results using the methods &lt;code class=&quot;highlighter-rouge&quot;&gt;atLeast()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;atMost()&lt;/code&gt; that the library provides making the below a valid&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;await&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;atLeast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SECONDS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;atMost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SECONDS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;until&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;personsList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Awaitility uses polling to verify that the condition is met. The polling period and its algorithm can be configured. The library also provides other advance usages that you can explore in their &lt;a href=&quot;https://github.com/awaitility/awaitility/wiki/Usage&quot;&gt;Usage&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Awaitility integrates with JUnit and can be used by adding the below dependencies&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- maven --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.awaitility&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;awaitility&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.0.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// gradle&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;testCompile&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'org.awaitility:awaitility:4.0.0'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;pitest&quot;&gt;Pitest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://pitest.org/&quot;&gt;Pitest&lt;/a&gt; is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Mutation_testing&quot;&gt;mutation testing&lt;/a&gt; tool for the java language. It is different from the other libraries because Pitesst is not used in writing tests, but in making sure that the tests we write will catch bugs if the production code ever changes.&lt;/p&gt;
+
+&lt;p&gt;The way pitest works is as follows:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;It creates copies of the bytecode of our program&lt;/li&gt;
+  &lt;li&gt;It changes the copies in small but different ways&lt;/li&gt;
+  &lt;li&gt;It runs the unit test suite on each of these copies.&lt;/li&gt;
+  &lt;li&gt;It asserts that the unit tests will fail on each of the manipulated copies. If the test did not fail it means that there is a change that could happen to the production code that will not be caught by the unit tests&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So Pitest is a library that will allow us to assert the quality of our test by making sure that our tests fail if a change happens to the production code. Other test quality metrics that are traditionally used such as code coverage are still important to measure but are not enough to ensure we write high quality, valid tests.&lt;/p&gt;
+
+&lt;p&gt;To use Pitest, you need to add the below dependency and then use the plugin to generate the Pitest reports as part of the build lifecycle.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- maven --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.pitest&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;pitest-parent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.4.9&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;type&amp;gt;&lt;/span&gt;pom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/type&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// gradle&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;group:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'org.pitest'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;name:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pitest-parent'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;version:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.4.9'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;ext:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pom'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hamcrest
+    &lt;ul&gt;
+      &lt;li&gt;Write declarative assertions making the tests cleaner and more readable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Awaitility
+    &lt;ul&gt;
+      &lt;li&gt;Test Asynchronous systems by making tests wait for the results of the async calls in an intuitive way.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pitest
+    &lt;ul&gt;
+      &lt;li&gt;Make sure that your tests will catch bugs in the code by changing the production code and asserting tests will fail with those changes&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Maher Malaeb</name><email>m.n.malaeb@gmail.com</email></author><summary type="html">There are many frameworks and library to help writing unit tests in the Java world. Three of the less know ones are Hamcrest, Awaitility and Pitest. Learn the value of having these tools in your Java testing toolkit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/better-unit-tests.jpg" /></entry><entry><title type="html">Java 13 - Simply Explained</title><link href="http://localhost:4000/blog/2019-08-13-java-13-simply-explained/" rel="alternate" type="text/html" title="Java 13 - Simply Explained" /><published>2019-08-13T00:00:00+03:00</published><updated>2019-08-13T00:00:00+03:00</updated><id>http://localhost:4000/blog/java-13-simply-explained</id><content type="html" xml:base="http://localhost:4000/blog/2019-08-13-java-13-simply-explained/">&lt;p&gt;The Java language today is younger than ever, delivering new and exciting features every 6 months.In less than 10 minutes, you can learn about Text Blocks, the new Switch Expression and the different API and platform changes that JDK 13 introduces!&lt;/p&gt;
 
 &lt;h2 id=&quot;text-blocks&quot;&gt;Text Blocks&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;This feature is still a preview feature in JDK 13 so it is not recommended to use it in production. It might have breaking changes in the future.&lt;/em&gt;&lt;/p&gt;
