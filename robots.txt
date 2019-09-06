@@ -1,1 +1,1 @@
-Sitemap: https://codeminimalism.com/codeminimalism/sitemap.xml
+Sitemap: https://codeminimalism.com/sitemap.xml
