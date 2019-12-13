@@ -1,5 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://codeminimalism.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://codeminimalism.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-09-07T10:38:46+03:00</updated><id>https://codeminimalism.com/feed.xml</id><title type="html">Maher Malaeb</title><subtitle>&quot;Maher Malaeb Personal Site&quot;. I write about what I am learning in tech and software engineering
-</subtitle><author><name>Maher Malaeb</name><email>m.n.malaeb@gmail.com</email></author><entry><title type="html">Write Better Java Unit Tests Using These Less Known Libraries</title><link href="https://codeminimalism.com/blog/2019-08-31-java-better-unit-tests-libraries/" rel="alternate" type="text/html" title="Write Better Java Unit Tests Using These Less Known Libraries" /><published>2019-08-31T00:00:00+03:00</published><updated>2019-08-31T00:00:00+03:00</updated><id>https://codeminimalism.com/blog/java-better-unit-tests-libraries</id><content type="html" xml:base="https://codeminimalism.com/blog/2019-08-31-java-better-unit-tests-libraries/">&lt;p&gt;If you try to Google for the best Java unit testing frameworks and libraries, you will get a bunch of famous names such as JUnit, Mockito, TestNG, Cucumber, Spring Test, etc. However, there are 3 libraries that equally valuable and yet they receive less attention.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://codeminimalism.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://codeminimalism.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-12-13T19:03:27+02:00</updated><id>https://codeminimalism.com/feed.xml</id><title type="html">Maher Malaeb</title><subtitle>&quot;Maher Malaeb Personal Site&quot;. I write about what I am learning in tech and software engineering
+</subtitle><author><name>Maher Malaeb</name><email>m.n.malaeb@gmail.com</email></author><entry><title type="html">Help The Manager Help You</title><link href="https://codeminimalism.com/blog/2019-12-13-help-the-manager-help-you/" rel="alternate" type="text/html" title="Help The Manager Help You" /><published>2019-12-13T00:00:00+02:00</published><updated>2019-12-13T00:00:00+02:00</updated><id>https://codeminimalism.com/blog/help-the-manager-help-you</id><content type="html" xml:base="https://codeminimalism.com/blog/2019-12-13-help-the-manager-help-you/">&lt;p&gt;We all praise or blame our bosses for our development throughout our career. We thank the manager when we get a promotion, attend trainings and conferences or get assigned to an interesting project. We also blame them when we do not get these things. And indeed, a manager can have a big influence on our career growth. However, we usually tend to forget that the manager is only part of the equation to be happy in our job and grow a satisfying career. The other part of the equation is us. Let’s help managers help us.&lt;/p&gt;
+
+&lt;blockquote class=&quot;lead&quot;&gt;
+  &lt;p&gt;Managers are only part of our happiness equation. The other part is us.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To reach our destination, the first step is to identify where do we want to go. This is much easier said than done. We should identify what makes us happy on the long run, what do we enjoy most at work and what do we want to learn and explore. Then we should set clear short term goals that will push us towards our destination or vision. It is very unrealistic to expect a manager to find out what will make us happy and set goals for us that are inline with our vision. When our goals are set, we should articulate them to our manager and be very clear about it. Asking for clear guidance and advice from a manager who is usually more experienced is very important, although some people might be discouraged to ask for help. We should articulate our needs clearly; managers can’t read minds. After we set our goals and express them, we should expect from our manager to help us reach them, advocate for those goals and give us the opportunity to pursue them. However, doing so does not guarantee that the manager will be able to put us where we want to be. If we asked for a promotion and worked hard for it, the job of the manager is to advocate for our promotion but they cannot always guarantee it. There are many other factors that plays a role in decision making process for some of our demands that are not in the hands of our manager. It is important to put ourselves in the manager’s shoes before judging whether we have been treated fairly or not. This will also help us have more empathy towards the manager when we understand that they are humans, they share the same struggles with us and they will make mistakes.&lt;/p&gt;
+
+&lt;blockquote class=&quot;lead&quot;&gt;
+  &lt;p&gt;We should articulate our needs clearly. Managers can’t read minds.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Another important factor for our career growth is feedback. In our career journey, we should expect to get feedback on regular basis from managers. If we are not getting feedback, then we should not wait but ask for it. When we do that, we expect to have some negative feedback that might feel hurtful or untrue. But with an open mind this is a great opportunity to learn and improve and become better. We should learn to embrace constructive feedback.&lt;/p&gt;
+
+&lt;p&gt;If we asked for specific trainings, projects, skills or promotions and the manager did not give us the opportunity to pursue them. If we are not getting any feedback even when we ask for it. If after applying all the above steps we did not get the expected response and support from the manager. Only then it is a clear sign that the manager will not help us grow in our career and reach our destination. In that case the best solution might be changing for a new manager.&lt;/p&gt;</content><author><name>Maher Malaeb</name><email>m.n.malaeb@gmail.com</email></author><summary type="html">Managers can play a big role in our career growth. It is important that we provide them with all the tools that will help us reach our goals.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://codeminimalism.com/assets/img/blog/help-the-manager-help-you.jpg" /></entry><entry><title type="html">A Unit Tests Checklist Poster</title><link href="https://codeminimalism.com/blog/2019-09-22-unit-tests-checklist/" rel="alternate" type="text/html" title="A Unit Tests Checklist Poster" /><published>2019-09-22T00:00:00+03:00</published><updated>2019-09-22T00:00:00+03:00</updated><id>https://codeminimalism.com/blog/unit-tests-checklist</id><content type="html" xml:base="https://codeminimalism.com/blog/2019-09-22-unit-tests-checklist/">&lt;p&gt;Checklists are an excellent tool to ensure that a specific process is being applied. They are designed to be read fast, and to reduce the amount of human error happening when applying a process. Checklists are heavily used in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Checklist#Applications&quot;&gt;health-care industry and aviation systems for example&lt;/a&gt; where mistakes are critical.&lt;/p&gt;
+
+&lt;p&gt;When it comes to software unit tests, although mistakes are usually less critical, tests can still benefit from a checklist to ensure a standard is always applied. The checklist for unit tests is a set of 10-amedments that each test must adhere to. I present the 10 rules of unit testing in a poster than can be used as a reference to always check before submitting unit tests to the code line.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/unit-test-checklist-A6.jpg&quot; alt=&quot;poster preview&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;You can also download the full size A3 or A4 poster&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;/assets/img/blog/unit-test-checklist-A3.jpg&quot;&gt;A3 poster&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;/assets/img/blog/unit-test-checklist-A4.jpg&quot;&gt;A4 poster&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Each of the rules presented in the poster is explained in more details next.&lt;/p&gt;
+
+&lt;h3 id=&quot;expressive-names&quot;&gt;Expressive names&lt;/h3&gt;
+&lt;p&gt;Writing good test names is key to help future readers of the code understand what the test is doing. They also serve as code documentation to understand its functionality. There are many conventions to write unit tests. The convention I recommend comes from the behavior driven development (BDD) discipline and it goes as follows&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Given &amp;lt;a current state&amp;gt;
+When  &amp;lt;something happen&amp;gt;
+Then  &amp;lt;a specific result is expected&amp;gt;
+
+// example of a test name:
+given_valid_passport_when_ticket_is_paid_then_check_in_to_flight
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This convention will help write tests that deliver business value.&lt;/p&gt;
+
+&lt;h3 id=&quot;offline&quot;&gt;Offline&lt;/h3&gt;
+&lt;p&gt;Tests should not depend on external resources like the availability of a database or a REST service to be executed and to pass. If such dependencies are present than tests will take longer to execute, and they will fail if an error occurred in the external service. Instead of depending on external resources, it is recommended that such resources are mocked in unit tests.&lt;/p&gt;
+
+&lt;h3 id=&quot;order-independent&quot;&gt;Order independent&lt;/h3&gt;
+&lt;p&gt;Multiple tests in a test class should not depend on each other. Tests should be self-contained and always pass regardless of the order they are launched in. Many test runners execute tests in random order so having dependencies between tests will introduce random failures&lt;/p&gt;
+
+&lt;h3 id=&quot;platform-independent&quot;&gt;Platform independent&lt;/h3&gt;
+&lt;p&gt;Tests should pass when executed on all supported platforms. For example, the same unit test that pass on the Windows machine of the developer should pass on the Linux machine when the Continuous  integration server launches the tests.&lt;/p&gt;
+
+&lt;h3 id=&quot;pass-consistently&quot;&gt;Pass consistently&lt;/h3&gt;
+&lt;p&gt;In a given state of code, the test should either always pass or always fail. There should be no randomness which makes it difficult to identify and debug issues. For example, a main cause of randomness in unit tests is when we use timeouts to test asynchronous code. Asynchronous test libraries can be very useful to avoid such situations&lt;/p&gt;
+
+&lt;h3 id=&quot;fast&quot;&gt;Fast&lt;/h3&gt;
+&lt;p&gt;Codebases will hold thousands and thousands of unit tests. Those tests will also be launched thousands of times in the development process. So even Milliseconds gain in each test time can make a huge difference on the feedback time of out test suite. For that reason, it is recommended that a unit test execution be in the order of Milliseconds to make the test suite scalable.&lt;/p&gt;
+
+&lt;h3 id=&quot;high-coverage&quot;&gt;High coverage&lt;/h3&gt;
+&lt;p&gt;Although code coverage is not a complete indicator about the quality of our unit tests, it is a good starting point. Usually when code coverage is around 80% and the tests are complying to the other principles, we can guarantee higher quality unit tests.&lt;/p&gt;
+
+&lt;h3 id=&quot;mock-cautiously&quot;&gt;Mock Cautiously&lt;/h3&gt;
+&lt;p&gt;Mocks and stubs are an excellent tool that should be in every developer’s toolkit when writing unit tests. It can help isolate units from their dependencies and test specific behaviors of an application assuming a specific stable state. But if mocks are overused one will end up testing implementation details which will create test technical debt in the long run. Refactoring will be much harder because every refactoring will break many unit tests which are not easy to fix.&lt;/p&gt;
+
+&lt;p&gt;When noticing the creation of many mocks and testing implementation details, then one should consider refactoring and applying single responsibility principle to the class under test and it should help resolve this issue.&lt;/p&gt;
+
+&lt;h3 id=&quot;test-behavior&quot;&gt;Test behavior&lt;/h3&gt;
+&lt;p&gt;Each production class has a purpose. Only the purpose of the class should be tested and not how the purpose is achieved. In other words, we should be testing the API of the class and not the implementation details. To insure this is applied, one should never change the visibility of methods and fields just to be able to access them inside tests.&lt;/p&gt;
+
+&lt;p&gt;When noticing that it is impossible to test without changing visibility, then it is a sign that there is something wrong in the design of the class. Refactoring the code instead of exposing more methods and fields should be considered.&lt;/p&gt;
+
+&lt;h3 id=&quot;reproduce-bugs&quot;&gt;Reproduce Bugs&lt;/h3&gt;
+&lt;p&gt;When fixing a bug that was detected, the first thing to do is write a failing unit test that reproduces the bug. This guarantees that the bug will never happen again. Then after writing the test fix the bug in the production code.&lt;/p&gt;</content><author><name>Maher Malaeb</name><email>m.n.malaeb@gmail.com</email></author><summary type="html">Access a downloadable poster of the unit tests checklist, and an explanation of why every rule is important to produce higher quality unit tests</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://codeminimalism.com/assets/img/blog/unit-test-checklist-header.jpg" /></entry><entry><title type="html">Write Better Java Unit Tests Using These Less Known Libraries</title><link href="https://codeminimalism.com/blog/2019-08-31-java-better-unit-tests-libraries/" rel="alternate" type="text/html" title="Write Better Java Unit Tests Using These Less Known Libraries" /><published>2019-08-31T00:00:00+03:00</published><updated>2019-08-31T00:00:00+03:00</updated><id>https://codeminimalism.com/blog/java-better-unit-tests-libraries</id><content type="html" xml:base="https://codeminimalism.com/blog/2019-08-31-java-better-unit-tests-libraries/">&lt;p&gt;If you try to Google for the best Java unit testing frameworks and libraries, you will get a bunch of famous names such as JUnit, Mockito, TestNG, Cucumber, Spring Test, etc. However, there are 3 libraries that equally valuable and yet they receive less attention.&lt;/p&gt;
 
 &lt;h2 id=&quot;hamcrest&quot;&gt;Hamcrest&lt;/h2&gt;
 
